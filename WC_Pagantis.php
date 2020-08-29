@@ -774,15 +774,16 @@ class WcPagantis
             'pagantis/v1',
             '/logs/(?P<secret>\w+)/(?P<from>\d+)/(?P<to>\d+)',
             array(
-                'methods'  => 'GET',
-                'callback' => array(
-                    $this,
-                    'readLogs'),
-                    ,
-                'permision_callback' => array( 
-                    $this,
-                    'permissions_check'
-                ),
+                array(
+                    'methods'  => 'GET',
+                    'callback' => array(
+                        $this,
+                        'readLogs'),
+                    'permision_callback' => array( 
+                        $this,
+                        'permissions_check'
+                    ),
+                )
             ),
             true
         );
@@ -791,14 +792,16 @@ class WcPagantis
             'pagantis/v1',
             '/configController/(?P<secret>\w+)',
             array(
-                'methods'  => 'GET, POST',
-                'callback' => array(
-                    $this,
-                    'updateExtraConfig'),
-                'permision_callback' => array( 
-                    $this,
-                    'permissions_check'
-                ),
+                array(
+                    'methods'  => 'GET, POST',
+                    'callback' => array(
+                        $this,
+                        'updateExtraConfig'),
+                    'permision_callback' => array( 
+                        $this,
+                        'permissions_check'
+                    ),
+                )
             ),
             true
         );
@@ -807,15 +810,17 @@ class WcPagantis
             'pagantis/v1',
             '/api/(?P<secret>\w+)/(?P<from>\w+)/(?P<to>\w+)',
             array(
-                'methods'  => 'GET',
-                'callback' => array(
-                    $this,
-                    'readApi'
-                ),
-                'permision_callback' => array( 
-                    $this,
-                    'permissions_check'
-                ),
+                array(
+                    'methods'  => 'GET',
+                    'callback' => array(
+                        $this,
+                        'readApi'
+                    ),
+                    'permision_callback' => array( 
+                        $this,
+                        'permissions_check'
+                    ),
+                )
             ),
             true
         );
