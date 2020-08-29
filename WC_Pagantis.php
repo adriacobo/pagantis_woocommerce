@@ -779,7 +779,7 @@ class WcPagantis
                     'callback' => array(
                         $this,
                         'readLogs'),
-                    'permision_callback' => array( 
+                    'permission_callback' => array( 
                         $this,
                         'permissions_check'
                     ),
@@ -797,7 +797,7 @@ class WcPagantis
                     'callback' => array(
                         $this,
                         'updateExtraConfig'),
-                    'permision_callback' => array( 
+                    'permission_callback' => array( 
                         $this,
                         'permissions_check'
                     ),
@@ -816,7 +816,7 @@ class WcPagantis
                         $this,
                         'readApi'
                     ),
-                    'permision_callback' => array( 
+                    'permission_callback' => array( 
                         $this,
                         'permissions_check'
                     ),
